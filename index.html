@@ -1,0 +1,120 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,height=device-height">
+    <title>Pollfish Webplugin Demo | Offerwall approach </title>
+
+    <style>
+      body,h3,html{font-family:Helvetica}h1,h3,span{text-shadow:0 1px 2px rgba(0,0,0,.2)}.container,ul{margin:0 auto}body,html{margin:0;padding:0}html{height:100%;width:100%;background:linear-gradient(#3ca1c5,#397596)}.container{max-width:960px}.jumbotron,.lives{padding-top:70px;text-align:center;position:relative}.shark,footer{position:absolute;bottom:0;right:0}.jumbotron{display:none}span{color:#fff;font-size:14px;display:block;margin-top:12px;opacity:.6}h1{font-size:48px;margin-top:.2em;margin-bottom:2em;color:#2feac6}h3{font-size:28px;color:#FFF;text-align:center;margin:0}ul{list-style:none;padding:0;border:4px solid #7f7463;border-radius:10px;max-width:200px;overflow:hidden}li{box-sizing:border-box;display:inline-block;width:20%;height:23px;background:linear-gradient(#f26d53,#a5230f);border-right:1px solid #721507}li.active{background:linear-gradient(#53f2c6,#0fa528)}p{color:#a5230f}li:last-child{border-right:none}button{cursor:pointer;text-transform:uppercase;font-weight:700;border:none;border-radius:22px;box-shadow:0 3px 8px 0 #37597d;color:#fff;font-size:18px;padding:1em 3em;background-color:#e6a62e}button:active,button:focus,button:hover{box-shadow:0 1px 8px 0 #37597d}footer{left:10%;z-index:-1}#background-wrap{bottom:0;left:0;position:fixed;right:0;top:0;z-index:-1}@-webkit-keyframes animateBubble{0%{transform:translate3d(0,1000px,0)}100%{transform:translate3d(0,-100%,0)}}@-moz-keyframes animateBubble{0%{transform:translate3d(0,1000px,0)}100%{transform:translate3d(0,-100%,0)}}@keyframes animateBubble{0%{transform:translate3d(0,1000px,0)}100%{transform:translate3d(0,-100%,0)}}@-webkit-keyframes sideWays{0%{margin-left:0}100%{margin-left:50px}}@-moz-keyframes sideWays{0%{margin-left:0}100%{margin-left:50px}}@keyframes sideWays{0%{margin-left:0}100%{margin-left:50px}}.x1{-webkit-animation:animateBubble 12s linear infinite,sideWays 2s ease-in-out infinite alternate;-moz-animation:animateBubble 12s linear infinite,sideWays 2s ease-in-out infinite alternate;animation:animateBubble 12s linear infinite,sideWays 2s ease-in-out infinite alternate;left:-5%;top:5%;-webkit-transform:scale(.6);-moz-transform:scale(.6);transform:scale(.6)}.x2{-webkit-animation:animateBubble 14s linear infinite,sideWays 4s ease-in-out infinite alternate;-moz-animation:animateBubble 14s linear infinite,sideWays 4s ease-in-out infinite alternate;animation:animateBubble 14s linear infinite,sideWays 4s ease-in-out infinite alternate;left:5%;top:80%;-webkit-transform:scale(.4);-moz-transform:scale(.4);transform:scale(.4)}.x3{-webkit-animation:animateBubble 18s linear infinite,sideWays 2s ease-in-out infinite alternate;-moz-animation:animateBubble 18s linear infinite,sideWays 2s ease-in-out infinite alternate;animation:animateBubble 18s linear infinite,sideWays 2s ease-in-out infinite alternate;left:10%;top:40%;-webkit-transform:scale(.7);-moz-transform:scale(.7);transform:scale(.7)}.x4{-webkit-animation:animateBubble 16s linear infinite,sideWays 3s ease-in-out infinite alternate;-moz-animation:animateBubble 16s linear infinite,sideWays 3s ease-in-out infinite alternate;animation:animateBubble 16s linear infinite,sideWays 3s ease-in-out infinite alternate;left:20%;top:0;-webkit-transform:scale(.3);-moz-transform:scale(.3);transform:scale(.3)}.x5{-webkit-animation:animateBubble 29s linear infinite,sideWays 4s ease-in-out infinite alternate;-moz-animation:animateBubble 29s linear infinite,sideWays 4s ease-in-out infinite alternate;animation:animateBubble 29s linear infinite,sideWays 4s ease-in-out infinite alternate;left:30%;top:50%;-webkit-transform:scale(.5);-moz-transform:scale(.5);transform:scale(.5)}.bubble{-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;-webkit-box-shadow:0 20px 30px rgba(0,0,0,.2),inset 0 10px 30px 5px rgba(255,255,255,.3);-moz-box-shadow:0 20px 30px rgba(0,0,0,.2),inset 0 10px 30px 5px rgba(255,255,255,.3);box-shadow:0 20px 30px rgba(0,0,0,.2),inset 0 10px 30px 5px rgba(255,255,255,.3);height:80px;position:absolute;width:80px}
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="js-lives" class="lives">
+        <ul class="lives-container">
+          <li></li><li></li><li></li><li></li><li></li>  
+        </ul>
+        <p>RUN OUT OF LIVES</p>
+
+        <svg class="shark" width="124" height="51" xmlns="http://www.w3.org/2000/svg"><path d="M118.244 21.91l-1.026-.466h1.585l-.164-3.037s-.453-.455-1.032-.414c0 0-6.656 5.538-7.275 10.497 0 0-10.088-6.766-24.761-9.999l.125-.5s-1.782-1.251-2.232-2.05c0 0-2.45-3.3-1.65-7.598l1.15-1.55s.5-3.65 1.199-5.249c0 0-.2-3.4-10.398 6.798 0 0-2.498 3.5-3.599 5.649 0 0-.75 1.55-4.997 1.3 0 0-17.616-.002-30.3 4.755 0 0-24.559 7.44-33.869 15.657 0 0 1.267 6.628 15.01 5.75l1.657-.487 2.047-.78 1.123-.318.483.483s-.693.18-1.256.049c0 0-.339.817.241 1.133 0 0-1.048-.13-1.305-.553 0 0-.048.773.484 1.111 0 0-.774-.145-1.209-.483 0 0 .097.822.29.87 0 0-.676.145-1.11 0 0 0 0 .773 1.16.87 0 0-1.305 1.208 2.029 1.74 0 0 5.944 1.642 11.163 1.547 0 0 11.6.58 18.267-1.596 0 0 1.488 6.994 8.39 4.476 0 0-.187-4.663 7.181-7.274 0 0 16.507-1.492 24.62-3.637l2.333 2.797 1.025-.186s.84-1.212 2.144-1.771c0 0 15.669.186 3.918-1.4l-.84-1.026s2.891-.28 5.969-.372l2.425.932-1.4-1.875 1.866.85V34.5h2.891S115.82 46.25 123 48.77c0 0-4.383-5.503-6.435-15.574 0 0 .28-7.834 1.679-11.284z" stroke="transparent" fill="#144D7C" fill-rule="evenodd" opacity=".544"/></svg>
+      </div>
+      <div id="js-surveyPrompt" class="jumbotron">
+        <h3>Answer multiple surveys and earn</h3>
+        <h1>extra lives</h1>
+        <button>Go to the Offerwall</button>
+        <span id="js-loi"></span>
+      </div>
+
+      <div id="js-no-surveyPrompt" class="jumbotron">
+        <h3>You have no extra lives</h3>
+        <h1>Check again later</h1>
+      </div>
+
+      <div id="js-success" class="jumbotron">
+        <h3>You successfully completed the survey</h3>
+        <h1>You got an extra life!</h1>
+        <button id="js-play-again">Play again</button>
+      </div>
+
+      <footer>
+        <svg class="ship" width="349" height="188" xmlns="http://www.w3.org/2000/svg"><path d="M323.372 52.844l3.488-10.857 3.943 1.415-2.937 11.147-4.494-1.705zm2.752 8.315l-6.684-2.278-1.378-.47h-.001l-11.21-3.822-2.005-.684h-.003l-13.024-4.441-.627-.213-8.852-3.017 2.148-5.107L303.4 48.26l3.147 1.729a.509.509 0 0 0 .439.025.505.505 0 0 0 .279-.296l19.896 7.505-1.037 3.936zm4.959 60.706l-2.425 6.637-6.003-2.336 2.898-7.348 5.53 3.047zm5.739 10.913l-1.094 4.437-7.647-4.149 1.18-3.23 7.561 2.942zm-3.303 13.395l-3.554-1.279-.021-.202-4.066-5.601 1.847-5.054 7.751 4.205-1.957 7.931zm-11.984 27.331l-2.279-1.139 7.758-7.453 1.67.604c-.105 3.802-.384 7.694-.944 11.263l-6.205-3.275zm-12.267-13.383l2.077-.491-1.851 7.855-2.614-1.308 2.388-6.056zm8.05-90.56l-1.913-.598 2.829-9.412 2.215.755-3.131 9.255zm.978.304l3.122-9.229 4.445 1.515-2.453 9.309-5.114-1.595zm3.074 59.561l.91-2.309 6.027 2.347-1.136 3.108-5.801-3.146zm-.884 2.24l.506-1.283 5.823 3.16-1.662 4.551-4.667-6.428zm-.889 2.257l4.118 5.672-6.083-.688 1.965-4.984zm-5.779 25.121l6.982-1.653-.237-.995-8.5 2.012-.396-.143-.06.252-1.882.445 5.421-13.751 12.555-.126.265.366c.155 1.581.918 9.89.743 18.988l-14.891-5.395zm3.807 12.506l3.355-8.822 4.96 1.795-7.655 7.356-.66-.329zm-4.529-11.679l6.922 2.507-2.366 6.216-4.556-8.723zm-2.661 8.083l1.78-7.559 4.951 9.478-.463 1.215-6.268-3.134zm-2.288-111.842l9.119 3.108-2.837 9.438-9.559-2.98 3.277-9.566zm-6.209 8.651l3.072-9.721 1.487.507.682.233-3.286 9.59-1.955-.609zm-11.883-3.707l4.63-9.533 9.357 3.189-3.08 9.746-10.907-3.402zm8.999 21.684l-10.014-4.659 1.386-6.403 10.181 4.16-1.553 6.902zm-7.724-32.361l.481.164 1.899.648-4.644 9.557-1.507-.47 3.771-9.899zm-13.604 6.831l4.217-10.031 8.418 2.869-3.781 9.924-8.854-2.762zm5.238 19.664l-3.459-1.725v-7.076l6.756 2.588-3.297 6.213zm-6.301-65.473l4.874 17.277-4.28 6.027-.594-23.304zm8.864 1.172v10.486l-3.23 4.548-5.201-18.441 8.431 3.407zm5.724 16.635l6.063 2.177-3.682 10.174-8.004-3.037 5.623-9.314zm32.587 11.695l1.138.408.921.33-3.483 10.84-1.699-.645 3.123-10.933zm-9.584-3.44l8.618 3.093-3.118 10.916-8.954-3.399 3.454-10.61zm-2.981-1.069l.425.152 1.591.571-3.446 10.593-1.766-.67 3.196-10.646zm-15.347 6.036l-1.338-.509 3.689-10.19 2.22.796-4.571 9.903zm5.538-9.557l8.845 3.175-3.19 10.629-10.233-3.884 4.578-9.92zm-5.927-10.764l37.094 14.355-1.567 5.944-6.234-2.237-1.161-.417h-.001l-10.98-3.94-1.576-.566h-.001l-9.743-3.496-3.225-1.158h-.001l-6.351-2.279 3.746-6.206zm19.412-11.957l14.445 4.475v4.42l-3.68 1.28-1.467 2.732-3.772-3.361-2.724-.628v-6.077l-2.725-1.463-4.401 1.463-1.257 2.933-4.635-5.774h10.216zm-55.238 56.713h-3.107l2.071-6.158 3.624 1.541-2.588 4.617zm-6.039-1.552l-3.452-1.726 2.244-5.522 2.932 1.844-1.724 5.404zm-9.147-3.065l1.554-6.016 4.141 1.142-2.243 6.213-3.452-1.339zm-2.845-2.802l-3.563-1.208.713-5.219 3.625 1.37-.775 5.057zm-6.444-2.864h-3.604l-2.465 4.125-1.38-2.297 2.761-8.674 4.688 1.254v5.592zm-2.892-27.645l3.674 2.941H228.4l3.944-2.941zM219.85 56.582l-4.142-.76V43.588l5.694 2.053-1.552 10.941zm-9.824 8.921l-2.991-.57 2.299-8.335 2.924.957.317-.973-2.549 8.921zm-8.697-1.657l2.578-9.024 3.481 1.139-2.37 8.588-3.689-.703zm-17.427 35.745l-2.092-.213 2.96-10.979 2.398.606-3.266 10.586zm-6.597-.671l3.131-11.617 2.349.594-3.038 11.271-2.442-.248zm-4.505-.459l3.302-12.254 2.35.594-3.211 11.909-2.441-.249zm-3.184-.323l2.837-12.855 1.665.422-3.382 12.546-1.12-.113zm-104.139 5.277h-3.638l-2.598 4.158-8.221-2.902 2.344-9.234 14.959 5.37-2.846 2.608zm-25.643-.431l-3.387-1.582 3.387-9.158v10.74zm-10.201-4.765l-.854-1.008 4.63-12.92 6.158 2.778-4.981 13.463-4.953-2.313zm-5.728-6.756l-3.026-1.117 4.255-9.786 6.402 2.888-4.286 11.961-3.345-3.946zM342.88 45.431v-5.734l6.053-.319v-4.46l-13.16-4.679-3.562-7.18 3.562-2.522-5.239-1.886-.116.04V14.25a.513.513 0 0 0-.359-.489l-14.879-4.61a.54.54 0 0 0-.153-.023h-11.115L296.585 0h-3.353l4.191 5.868v7.338l-9.011-9.853h-4.819l.838 5.239-13.204-3.982-1.256 1.677 5.595 2.261.702 27.549-.293.414-8.603 14.974-24.351-8.556h.001l-8.975-9.005h7.633v-2.046h-4.023l-4.702-3.763 5.647-16.634-.969-.329-5.712 16.824-5.233 3.902h-3.659v2.046h4.463l-2.554 2.651-4.717-1.657-7.646 5.416v15.172l-12.492-4.089-.636 1.946 2.512.821-2.649 9.277-2.666-.507v3.504l-3.502 3.187-5.37 17.402-16.862-4.265-3.345 15.147-2.46-.25-6.69 19.753-7.327-.318-4.143 1.274v-7.328l-3.667-1.408v-4.677l-12.843-6.756-8.315.52-11.433 12.471h-5.196l-6.235-4.157-5.197-2.598-22.346-6.756-1.685 1.545-18.094-6.495-3.047 12.01-3.678.735-3.328-1.554V85.867l-17.797-8.025-5.127 11.793L0 82.629c31.18 63.398 29.621 122.12 29.621 122.12l-9.354 17.668 321.021-12.913 5.097-5.734-1.911-3.823 2.547-16.248-14.017-4.143-3.351-1.769c2.04-12.005.815-27.581.424-31.766l4.164 1.499 3.791-15.369-8.421-3.277 2.735-7.482-6.415-3.534 2.931-7.434 14.018-64.993z" fill="#144D7C" fill-rule="evenodd" opacity=".544"/></svg>
+      </footer>
+    </div>
+
+    <div id="background-wrap">
+      <div class="bubble x1"></div>
+      <div class="bubble x2"></div>
+      <div class="bubble x3"></div>
+      <div class="bubble x4"></div>
+      <div class="bubble x5"></div>
+    </div>
+
+    <script type="text/javascript">
+      var pollfishConfig = {
+        api_key: "27278f6e-4197-492a-b8e9-e6478317e253",
+        indicator_position: "BOTTOM_RIGHT",
+        debug: true,
+        offerwall: true,
+        // https://www.pollfish.com/docs/webplugin. 
+        // Set the ready function to prevent autostarting the survey panel
+        ready: onOfferwallReady,
+        surveyNotAvailable: onSurveyNotAvailable,
+        surveyCompletedCallback: onSurveyCompleted,
+        userNotEligibleCallback: onUserDisqualified,
+      };
+
+      var awardedLives = 0;
+
+      function onOfferwallReady(data) {
+        var container = document.getElementById('js-surveyPrompt');
+        container.style.display = 'block';
+
+        container.querySelector('button').addEventListener('click', function() {
+          Pollfish.showFullSurvey();
+        });
+
+        var playAgainButton = document.getElementById("js-play-again");
+        playAgainButton.addEventListener('click', function(e) {
+          Pollfish.showFullSurvey();
+        });
+      }
+
+      function onSurveyNotAvailable() {
+        var container = document.getElementById('js-no-surveyPrompt');
+        container.style.display = 'block'; 
+      }
+
+      function onSurveyCompleted(data) {
+        var previousContainer = document.getElementById('js-surveyPrompt');
+        previousContainer.style.display = 'none';
+
+        awardedLives += 1;
+
+        // award your users extra lives if the survey revenue is higher
+        if (data.survey_price && data.survey_price > 60) {
+          awardedLives += 1;
+        }
+
+        var lives = document.getElementById('js-lives');
+        var listItems = lives.getElementsByTagName('LI');
+
+        for (var i = awardedLives - 1; i >= 0; i--) {
+          listItems[i].className = 'active';
+        }
+
+        lives.getElementsByTagName('P')[0].textContent = awardedLives + ' lives remaining';
+
+        var container = document.getElementById('js-success');
+        container.style.display = 'block';
+      }
+
+      function onUserDisqualified() {
+        // you can inform your user about being disqualified if you want here
+        console.log("user got disqualified");
+      }
+    </script>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script type="text/javascript" src="https://storage.googleapis.com/pollfish_production/sdk/webplugin/pollfish.min.js"></script>
+  </body>
+</html>
