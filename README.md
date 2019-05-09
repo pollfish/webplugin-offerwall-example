@@ -1,12 +1,11 @@
-# webplugin-rewarded-example
-An example of how a publisher can integrate the webplugin integration to their website using a rewarded approach.
+# webplugin-offerwall-example
+An example of how a publisher can integrate the webplugin integration to their website using an offerwall approach.
 
 ![HowItLooks](https://user-images.githubusercontent.com/4293389/47730087-1ca4b300-dc6a-11e8-8fab-0ce940c60321.png)
 
 ## What this example does
 - It will not allow the webplugin integration to autostart
-- It will change the number of lives provided based on the survey revenue
-- It will change the approximate LOI (if provided by the survey) shown to the user
+- It will change the number of lives provided based on each survey completed revenue
 - It will handle the case where a survey is not available
 
 More information can be found [on the webplugin documentation](https://www.pollfish.com/docs/webplugin).
