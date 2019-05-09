@@ -1,7 +1,7 @@
 # webplugin-offerwall-example
 An example of how a publisher can integrate the webplugin integration to their website using an offerwall approach.
 
-![HowItLooks](https://user-images.githubusercontent.com/4293389/47730087-1ca4b300-dc6a-11e8-8fab-0ce940c60321.png)
+![HowItLooks](https://user-images.githubusercontent.com/4293389/57443362-87a4f700-7256-11e9-9465-fff80e206e6b.png)
 
 ## What this example does
 - It will not allow the webplugin integration to autostart
